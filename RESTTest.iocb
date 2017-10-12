@@ -1,0 +1,22 @@
+////ioCog Binding File
+////REST Test
+////ioCog Dev
+////4 Oct-2017
+
+RESTClient GetToken ("http://localhost:41391", "/api/Token", GET,
+	Request (),
+	Response Text (
+		ResponseBinding APIKey (Token)
+	)
+);
+
+RESTClient GetExamples ("http://localhost:41391", "/api/Examples", GET,
+	AuthHeader (
+		AuthBinding APIKey (Token)
+	),
+	Response JSON (
+		ResponseBinding Example ("",
+			Mapping (ExampleID ExampleID, ExampleName ExampleName, ExampleDescription ExampleDescription, Image Image)
+		)
+	)
+);

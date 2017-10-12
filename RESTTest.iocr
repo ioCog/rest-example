@@ -1,0 +1,18 @@
+////ioCog Rules File
+////REST Test
+////ioCog Dev
+////4-Aug-2017
+
+Rule GetToken(
+	Comment "Get the JWT";
+	! APIKey;
+-->
+	ExecREST GetToken();
+);
+
+Rule GetExamples(
+	Comment "YUse the JWT to get the Examples";
+	APIKey;
+-->
+	ExecREST GetExamples();
+);

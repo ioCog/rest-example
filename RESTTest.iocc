@@ -1,0 +1,16 @@
+////ioCog Class File
+////REST Test
+////ioCog Dev
+////4 Oct-2017
+
+Class APIKey(
+	Comment "Web site API Key",
+	Token
+);
+
+Class Example(
+	ExampleID, 
+	ExampleName, 
+	ExampleDescription, 
+	Image
+);
